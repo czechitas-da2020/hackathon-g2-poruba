@@ -15,10 +15,11 @@ let homePage = {
         get ourRooms() { return browser.$('#hotelRoomsBlock') },
         get whatOurGuest() { return browser.$('#hotelTestimonialBlock') },
         get footer() { return browser.$('.footer-container') },
+        get languageChange() {return browser.$('#languages-block-top')}
     },
 
     open() {
-        browser.url("http://czechitas-datestovani-hackathon.cz/en/")
+        browser.url("http://czechitas-datestovani-hackathon.cz/")
       },
 }
 

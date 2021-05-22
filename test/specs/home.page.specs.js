@@ -7,8 +7,12 @@ describe('Main sections of home page', () => {
     })
 
     it('url structure is correct', () => {
-        //default language is english
+        //default language is english - www.czechitas-hackhaton.cz/languageSelected
         expect(browser).toHaveUrl("http://czechitas-datestovani-hackathon.cz/en/")
+    })
+
+    it('default language is english', () => {
+        expect(homePage.body.languageChange).toHaveText("English")
     })
 
     it('header is visible', () => {
