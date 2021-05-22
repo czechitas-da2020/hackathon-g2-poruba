@@ -16,6 +16,11 @@ let homePage = {
         get whatOurGuest() { return browser.$('#hotelTestimonialBlock') },
         get footer() { return browser.$('.footer-container') },
     },
-},
+
+    open() {
+        browser.url("http://czechitas-datestovani-hackathon.cz/en/")
+      },
+}
 
 
+module.exports = homePage
