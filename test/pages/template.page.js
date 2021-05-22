@@ -4,6 +4,7 @@ let template = {
   // PRIKLAD - funkce, ktera vraci element
   // get buttonAddCat() { return $('#addItem') },
   
+  
 }
 
 module.exports = template
