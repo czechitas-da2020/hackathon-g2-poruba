@@ -8,8 +8,6 @@ let homePage = {
         get logo() { return browser.$('#header_logo') },
         get signInHover() { return browser.$(".account_user_name") },
         get logoutBtn() { return browser.$("a=Logout") },
-
-
     },
 
     body: {
