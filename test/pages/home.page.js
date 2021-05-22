@@ -1,9 +1,12 @@
 let homePage = {
     header: {
         get buttSignIn() { return browser.$('.user_login') },
-        get buttMenu() {return browser.$('.nav_toggle')},
-        get shoppingCart() {return browser.$('.shopping_cart')},
-        get logo() {return browser.$('#header_logo')}
+        get buttMenu() { return browser.$('.nav_toggle') },
+        get shoppingCart() { return browser.$('.shopping_cart') },
+        get logo() { return browser.$('#header_logo') },
+        get signInHover() { return browser.$(".account_user_name") },
+        get logoutBtn() { return browser.$("a=Logout") },
+
 
     },
 
@@ -15,12 +18,12 @@ let homePage = {
         get ourRooms() { return browser.$('#hotelRoomsBlock') },
         get whatOurGuest() { return browser.$('#hotelTestimonialBlock') },
         get footer() { return browser.$('.footer-container') },
-        get languageChange() {return browser.$('#languages-block-top')}
+        get languageChange() { return browser.$('#languages-block-top') }
     },
 
     open() {
         browser.url("http://czechitas-datestovani-hackathon.cz/")
-      },
+    },
 }
 
 

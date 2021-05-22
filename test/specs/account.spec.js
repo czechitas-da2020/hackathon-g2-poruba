@@ -29,23 +29,44 @@ describe('Accounts - login, logout - english version', () => {
             expect(browser).toHaveUrl("http://czechitas-datestovani-hackathon.cz/en/my-account");
         })
         after(() => {
-            $("#user_info_acc").click();
-            $("a=Logout").click();
+            homePage.header.signInHover.click();
+            browser.pause(500);
+            homePage.header.logoutBtn.click();
+
         })
+
     })
     describe('US - HCKTHN 18 Logout', () => {
         before(() => {
-            browser.url("http://czechitas-datestovani-hackathon.cz/");
-            homePage.header.buttSignIn.click();
+            browser.url("http://czechitas-datestovani-hackathon.cz/en/login?back=my-account");
         })
         it('User logout', () => {
             loginPage.body.mailBox.setValue("porubacky@gmail.com"); //premade user email: porubacky@gmail.com; password: czechitas1
             loginPage.body.pswBox.setValue("czechitas1");
             loginPage.body.loginBtn.click();
-            $("#user_info_acc").click();
-            $("a=Logout").click();
+            homePage.header.signInHover.click();
+            browser.pause(500);
+            homePage.header.logoutBtn.click();
             expect(homePage.header.buttSignIn).toHaveText("Sign in");
         })
 
+    })
+    xdescribe('US - HCKTHN 21 My account page', () => {
+        before(() => {
+            browser.url("http://czechitas-datestovani-hackathon.cz/en/login?back=my-account");
+            loginPage.body.mailBox.setValue("porubacky@gmail.com"); //premade user email: porubacky@gmail.com; password: czechitas1
+            loginPage.body.pswBox.setValue("czechitas1");
+            loginPage.body.loginBtn.click();
+        })
+        it('', () => {
+
+        })
+        after(() => {
+            $('.account_user_name').click();
+            browser.pause(500);
+            $('a=Logout').click();
+        }
+
+        )
     })
 })
