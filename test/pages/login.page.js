@@ -7,8 +7,12 @@ let loginPage = {
         get mailBox() { return browser.$('#email') },
         get pswBox() { return browser.$('#passwd') },
         get loginBtn() { return browser.$('#SubmitLogin') },
-        get buttonCreate() {return browser.$('#SubmitCreate')},
-        get mailCreate() {return browser.$('#email_create')},
+        get buttonCreate() { return browser.$('#SubmitCreate') },
+        get mailCreate() { return browser.$('#email_create') },
+        get orderHistory() { return browser.$('[title = "Orders"]') },
+        get creditSlips() { return browser.$('[title = "Credit slips"]') },
+        get myAddresses() { return browser.$('[title = "Addresses"]') },
+        get homeBtn() { return browser.$('[title = "Home"]') },
     },
 
 

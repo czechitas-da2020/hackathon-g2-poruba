@@ -51,20 +51,32 @@ describe('Accounts - login, logout - english version', () => {
         })
 
     })
-    xdescribe('US - HCKTHN 21 My account page', () => {
+    describe.only('US - HCKTHN 21 My account page', () => {
         before(() => {
             browser.url("http://czechitas-datestovani-hackathon.cz/en/login?back=my-account");
             loginPage.body.mailBox.setValue("porubacky@gmail.com"); //premade user email: porubacky@gmail.com; password: czechitas1
             loginPage.body.pswBox.setValue("czechitas1");
             loginPage.body.loginBtn.click();
         })
-        it('', () => {
-
+        it('Order history and details on page', () => {
+            expect(loginPage.body.orderHistory).toBeVisible();
+        })
+        it('My credit slips on page', () => {
+            expect(loginPage.body.creditSlips).toBeVisible();
+        })
+        it('My addresses on page', () => {
+            expect(loginPage.body.myAddresses).toBeVisible();
+        })
+        it('My personal information on page', () => {
+            expect(loginPage.body.myAddresses).toBeVisible();
+        })
+        it('Home button on page', () => {
+            expect(loginPage.body.homeBtn).toBeClickable();
         })
         after(() => {
-            $('.account_user_name').click();
+            homePage.header.signInHover.click();
             browser.pause(500);
-            $('a=Logout').click();
+            homePage.header.logoutBtn.click();
         }
 
         )
