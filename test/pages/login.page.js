@@ -7,6 +7,8 @@ let loginPage = {
         get mailBox() { return browser.$('#email') },
         get pswBox() { return browser.$('#passwd') },
         get loginBtn() { return browser.$('#SubmitLogin') },
+        get buttonCreate() {return browser.$('#SubmitCreate')},
+        get mailCreate() {return browser.$('#email_create')},
     },
 
 

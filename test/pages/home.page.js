@@ -1,4 +1,6 @@
 let homePage = {
+    get url() {return 'http://czechitas-datestovani-hackathon.cz/'},
+
     header: {
         get buttSignIn() { return browser.$('.user_login') },
         get buttMenu() {return browser.$('.nav_toggle')},
@@ -15,11 +17,14 @@ let homePage = {
         get ourRooms() { return browser.$('#hotelRoomsBlock') },
         get whatOurGuest() { return browser.$('#hotelTestimonialBlock') },
         get footer() { return browser.$('.footer-container') },
-        get languageChange() {return browser.$('#languages-block-top')}
+        get languageChange() {return browser.$('#languages-block-top')},
+        get czech() {return browser.$('a=Čeština')}
     },
 
+
+
     open() {
-        browser.url("http://czechitas-datestovani-hackathon.cz/")
+        browser.url("/")
       },
 }
 
