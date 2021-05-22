@@ -51,7 +51,7 @@ describe('Accounts - login, logout - english version', () => {
         })
 
     })
-    describe.only('US - HCKTHN 17 My account page', () => {
+    describe('US - HCKTHN 17 My account page', () => {
         before(() => {
             browser.url("http://czechitas-datestovani-hackathon.cz/en/login?back=my-account");
             loginPage.body.mailBox.setValue("porubacky@gmail.com"); //premade user email: porubacky@gmail.com; password: czechitas1
